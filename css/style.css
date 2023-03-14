@@ -475,16 +475,12 @@ html {
   word-break: break-all;
 }
 .comment__remove {
-  height: 1px;
-  width: 1px;
-  background: transparent;
-  border: none;
-  border-radius: 0.2rem;
   cursor: pointer;
   position: absolute;
-  right: 1.5rem;
-  top: 0.8rem;
-  transition: all 0.3s;
+  right: 1rem;
+  top: 1rem;
+  display: block;
+  z-index: 2;
 }
 .comment__remove path {
   fill: rgba(141, 141, 141, 0.8);
