@@ -494,6 +494,7 @@ html {
   height: 12px;
 }
 .comment__like {
+  z-index: 2;
   position: absolute;
   display: block;
   cursor: pointer;
@@ -539,6 +540,7 @@ html {
   outline: none;
 }
 .form__date {
+  color: #000000;
   background: transparent;
   border: none;
 }
@@ -608,4 +610,4 @@ html {
     height: 60%;
     width: 100%;
   }
-}/*# sourceMappingURL=style.css.map *//*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
