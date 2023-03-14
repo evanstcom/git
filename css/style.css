@@ -485,12 +485,15 @@ html {
   right: 1.5rem;
   top: 0.8rem;
   transition: all 0.3s;
-  fill: black;
 }
-.comment__remove:hover {
-  fill: red;
+.comment__remove path {
+  fill: rgba(141, 141, 141, 0.8);
+}
+.comment__remove:hover path {
+  fill: darkred;
 }
 .comment__remove svg {
+  fill: red;
   width: 12px;
   height: 12px;
 }

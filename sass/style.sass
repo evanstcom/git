@@ -112,10 +112,13 @@ html
         right: 1.5rem
         top: 0.8rem
         transition: all 0.3s
-        fill: black
+        path
+            fill: rgba(141, 141, 141, 0.8)
         &:hover
-            fill: red
+            path
+                fill: darkred
         svg
+            fill: red
             width: 12px
             height: 12px
     &__like
@@ -215,4 +218,3 @@ html
         &__block
             height: 60%
             width: 100%
-
