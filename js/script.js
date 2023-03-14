@@ -215,7 +215,7 @@ function getDate() {
         " " +
         hours +
         ":" +
-        today.getMinutes()
+        minutes
     );
 }
 //регируем на изменения в форме
