@@ -1,17 +1,26 @@
 let formName = document.querySelector("#name");
 let formDate = document.querySelector("#date");
-let formMessage = document
-    .querySelector("#message")
-    ;
+date.value = getToday();
+function getToday() {
+    let today = new Date();
+    let day = today.getDate() < 10 ? "0" + today.getDate() : today.getDate();
+    let month = today.getMonth() + 1;
+    month = month < 10 ? "0" + month : month;
+    return today.getFullYear() + "-" + month + "-" + day;
+}
+console.log(date.value);
+let formMessage = document.querySelector("#message");
 let commentList = document.querySelector("#comments");
-let form = document.querySelector("#form").addEventListener("keydown", formKeydown);
+let form = document
+    .querySelector("#form")
+    .addEventListener("keydown", formKeydown);
 let comments = [];
 loadComments();
 
 document.querySelector("#submit").addEventListener("click", addComment);
 
 function formKeydown(e) {
-    if (e.code == 'enter') {
+    if (e.code == "enter") {
         form.submit();
     }
 }
@@ -19,7 +28,6 @@ function formKeydown(e) {
 function handleLikeChange() {
     comments[this.parentElement.parentElement.dataset.id].like =
         !comments[this.parentElement.parentElement.dataset.id].like;
-    console.log(comments);
     saveComments();
     showComments();
 }
@@ -173,7 +181,6 @@ c-0.456,0.983-1.113,1.828-1.929,2.518"
         buttonLike.append(div);
         comment.append(buttonRemove);
         comment.append(buttonLike);
-        console.log(comment);
         commentList.append(comment);
     });
 }
@@ -218,6 +225,7 @@ function getDate() {
         minutes
     );
 }
+
 //регируем на изменения в форме
 function changeInput() {
     return (error.style.display = "none");
