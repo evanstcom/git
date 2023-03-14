@@ -590,6 +590,7 @@ html {
   height: 22px;
 }
 .form__error {
+  font-size: 10px;
   display: none;
   line-height: 22px;
   color: red;
