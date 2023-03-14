@@ -61,7 +61,7 @@ function addComment(event) {
     comments.push(comment);
     formName.value = "";
     formMessage.value = "";
-    formDate.value = "";
+    formDate.value = getToday();
     saveComments();
     showComments();
 }
