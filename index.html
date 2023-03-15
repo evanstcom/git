@@ -5,79 +5,26 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="css/style.css" />
-        <title>Comments</title>
-        <meta name="description" content="Comments" />
+        <title>Git Search</title>
+        <meta name="description" content="Git Search" />
     </head>
     <body>
         <!-- Основной блок -->
         <section class="main-section">
             <div class="main-section__content">
-                <div class="main-section__post">
-                    <img
-                        class="main-section__img"
-                        src="img/1676968159073.jpg"
-                        alt="post"
-                    />
-                </div>
-                <div class="main-section__block">
-                    <div id="comments" class="main-section__comments"></div>
-                    <form action="" id="form" class="main-section__form form">
-                        <div class="form__info">
-                            <input
-                                class="form__name"
-                                type="text"
-                                name="name"
-                                id="name"
-                                placeholder="Ваше имя"
-                                required
-                                oninput="changeInput()"
-                            />
-                            <input
-                                class="form__date"
-                                type="date"
-                                name="date"
-                                id="date"
-                            />
-                        </div>
-                        <textarea
-                            class="form__message"
-                            id="message"
-                            rows="3"
-                            placeholder="Введите Ваш комментарий"
-                            required
-                            oninput="changeInput()"
-                        ></textarea>
-                        <div class="form__bottom">
-                            <h3 class="form__error" id="error">
-                                Заполните поля ввода имени и комментария!
-                            </h3>
-                            <button class="form__btn" type="submit" id="submit">
-                                <svg
-                                    width="800px"
-                                    height="800px"
-                                    viewBox="0 0 24 24"
-                                    fill="none"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                >
-                                    <path
-                                        d="M9.50929 4.23013L18.0693 8.51013C21.9093 10.4301 21.9093 13.5701 18.0693 15.4901L9.50929 19.7701C3.74929 22.6501 1.39929 20.2901 4.27929 14.5401L5.14929 12.8101C5.36929 12.3701 5.36929 11.6401 5.14929 11.2001L4.27929 9.46013C1.39929 3.71013 3.75929 1.35013 9.50929 4.23013Z"
-                                        stroke="#292D32"
-                                        stroke-width="1.5"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                    />
-                                    <path
-                                        opacity="0.34"
-                                        d="M5.43945 12H10.8395"
-                                        stroke="#292D32"
-                                        stroke-width="1.5"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                    />
-                                </svg>
-                            </button>
-                        </div>
+                <div class="main-section__search">
+                    <form class="main-section__form form">
+                        <input
+                            class="form__search"
+                            type="search"
+                            name="search"
+                            id="search"
+                            placeholder="Поиск"
+                        />
+                        <button class="form__btn" type="submit" id="submit">Поиск</button>
                     </form>
+                </div>
+                <div class="main-section__results" id="repo-list">
                 </div>
             </div>
         </section>
