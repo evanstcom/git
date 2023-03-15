@@ -498,6 +498,8 @@ html {
   border-radius: 1rem;
   cursor: pointer;
   transition: all 0.3s;
+  color: #3b8d99;
+  border-radius: 1rem;
 }
 .form__btn:hover {
   background: #3b8d99;
