@@ -16,7 +16,7 @@ function printRepo({ html_url, description, name, owner }) {
     //name
     const h3 = document.createElement("h3");
     h3.className = "element__name";
-    h3.innerHTML = `${description}`;
+    h3.innerHTML = `${description === null ? 'Нет описания': description}`;
     //fields name and language
     const fields = document.createElement("div");
     fields.className = "element__fields";
@@ -37,8 +37,8 @@ function handleSubmit(event) {
     const search = document.getElementById("search");
     if (search.value === '') return alert('Пустая строка поиска')
     repoList.innerHTML = "";
-    Promise.all([getRepo(search.value)]).then((values) => {
-        [repo] = values;
+    Promise.all([getRepo(search.value)]).then((value) => {
+        [repo] = value;
         if (repo.length === 0) {
             repoList.innerHTML = "Ничего не найдено";
         } else {
