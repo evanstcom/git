@@ -36,7 +36,8 @@ function handleSubmit(event) {
     event.preventDefault();
     const search = document.getElementById("search");
     let searchValue = search.value.trim();
-    if (searchValue === '' || searchValue.length < 3) return alert('Слишком мало символов!')
+    if (searchValue === '') return alert('Пустая строка поиска!')
+    if (searchValue.length < 3) return alert('Слишком мало символов!')
     repoList.innerHTML = "";
     Promise.all([getRepo(searchValue)]).then((value) => {
         [repo] = value;
