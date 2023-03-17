@@ -35,9 +35,10 @@ function alertError(error) {
 function handleSubmit(event) {
     event.preventDefault();
     const search = document.getElementById("search");
-    if (search.value === '') return alert('Пустая строка поиска')
+    let searchValue = search.value.trim();
+    if (searchValue === '' || searchValue.length < 3) return alert('Слишком мало символов!')
     repoList.innerHTML = "";
-    Promise.all([getRepo(search.value)]).then((value) => {
+    Promise.all([getRepo(searchValue)]).then((value) => {
         [repo] = value;
         if (repo.length === 0) {
             repoList.innerHTML = "Ничего не найдено";
